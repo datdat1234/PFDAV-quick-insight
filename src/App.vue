@@ -167,26 +167,20 @@ const activeTab = ref('tabular')
 
 // Thông tin Nhóm
 const groupInfo = ref({
-  name: 'Group_01', // Thay bằng tên khớp với sheet GroupRegistration
-  repoUrl: 'https://github.com/your-org/your-repo', // Link repository nhóm
+  name: 'Quick Insight', // Thay bằng tên khớp với sheet GroupRegistration
+  repoUrl: 'https://github.com/datdat1234/PFFDA-FE', // Link repository nhóm
   members: [
     {
-      name: 'Nguyễn Văn A',
-      mssv: '2110000',
-      role: 'Nhóm trưởng, Xử lý dữ liệu Tabular & Text',
-      github: 'https://github.com/nguyenvana' // Để null nếu không có link
+      name: 'Lê Phước Đạt',
+      mssv: '2670266',
+      role: 'Xử lý dữ liệu Text & Image',
+      github: 'https://github.com/datdat1234' // Để null nếu không có link
     },
     {
-      name: 'Trần Thị B',
+      name: 'Nguyễn Nhật Hạ',
       mssv: '2110001',
-      role: 'Xử lý dữ liệu Image & Multimodal',
+      role: 'Xử lý dữ liệu Tabular & Image',
       github: 'https://github.com/tranthib'
-    },
-    {
-      name: 'Lê Văn C',
-      mssv: '2110002',
-      role: 'Xử lý dữ liệu Time series, Báo cáo',
-      github: null // Không có link giả
     }
   ]
 })
