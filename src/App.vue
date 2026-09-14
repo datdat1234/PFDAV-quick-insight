@@ -216,26 +216,6 @@ const subProjects = ref([
     dataset: 'custom_image_folder/',
     method: 'OpenCV, PyTorch, CNN',
     link: '#'
-  },
-  {
-    id: 'multimodal',
-    title: 'Multimodal Data',
-    icon: '🔀',
-    description: 'Kết hợp đa phương thức (Text + Image / Tabular)',
-    details: 'Kết hợp thông tin từ nhiều nguồn dữ liệu khác nhau để xây dựng mô hình phân tích toàn diện.',
-    dataset: 'ecommerce_products (Text + Image)',
-    method: 'CLIP, Late Fusion',
-    link: '#'
-  },
-  {
-    id: 'timeseries',
-    title: 'Time Series Data',
-    icon: '📈',
-    description: 'Phân tích và dự báo dữ liệu chuỗi thời gian',
-    details: 'Phân tích xu hướng (Trend), tính mùa vụ (Seasonality) và dự báo các giá trị trong tương lai.',
-    dataset: 'stock_prices.csv',
-    method: 'ARIMA, Prophet, LSTM',
-    link: '#'
   }
 ])
 </script>
