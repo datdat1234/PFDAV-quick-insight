@@ -154,7 +154,7 @@
     </main>
 
     <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500">
-      <p>© 2026 {{ groupInfo.name }} - Đại học Bách Khoa – ĐHQG-HCM</p>
+      <p>© 2026 {{ groupInfo.name }} - Trường Đại học Bách Khoa – ĐHQG-HCM</p>
     </footer>
   </div>
 </template>
@@ -167,8 +167,10 @@ const activeTab = ref('tabular')
 
 // Thông tin Nhóm
 const groupInfo = ref({
-  name: 'Quick Insight', // Thay bằng tên khớp với sheet GroupRegistration
-  repoUrl: 'https://github.com/datdat1234/PFFDA-FE', // Link repository nhóm
+  name: 'Quick Insight',
+
+  repoUrl: 'https://github.com/datdat1234/PFDAV-quick-insight', // Link repository nhóm
+  
   members: [
     {
       name: 'Lê Phước Đạt',
