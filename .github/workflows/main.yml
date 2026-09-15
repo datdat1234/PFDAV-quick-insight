@@ -50,5 +50,5 @@ jobs:
             docker run -d \
               --name pffda-fe-instance \
               --restart always \
-              -p 5174:5174 \
+              -p 3000:3000 \
               ${{ secrets.DOCKER_USERNAME }}/pffda-fe:latest
