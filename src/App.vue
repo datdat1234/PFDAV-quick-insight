@@ -171,7 +171,7 @@ const groupInfo = ref({
   repoUrl: 'https://github.com/datdat1234/PFFDA-FE', // Link repository nhóm
   members: [
     {
-      name: 'Lê Phước Đạt 2',
+      name: 'Lê Phước Đạt',
       mssv: '2670266',
       role: 'Xử lý dữ liệu Text & Image',
       github: 'https://github.com/datdat1234' // Để null nếu không có link
