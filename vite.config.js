@@ -7,8 +7,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
-
+  base: process.env.GITHUB_ACTIONS ? '/PFDAV-quick-insight/' : '/', 
+  
   plugins: [
     vue(),
     vueDevTools(),
