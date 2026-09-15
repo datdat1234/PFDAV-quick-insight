@@ -180,9 +180,9 @@ const groupInfo = ref({
     },
     {
       name: 'Nguyễn Nhật Hạ',
-      mssv: '2110001',
+      mssv: '2670276',
       role: 'Xử lý dữ liệu Tabular & Image',
-      github: 'https://github.com/tranthib'
+      github: 'https://github.com/nhatha32'
     }
   ]
 })
@@ -194,9 +194,9 @@ const subProjects = ref([
     title: 'Tabular Data',
     icon: '📊',
     description: 'Phân tích và trực quan hóa dữ liệu dạng bảng',
-    details: 'Thực hiện thu thập, làm sạch và khám phá dữ liệu (EDA) trên tập dữ liệu dạng bảng. Áp dụng các kỹ thuật trực quan hóa để rút ra tri thức.',
-    dataset: 'housing_prices.csv',
-    method: 'Pandas, Seaborn, Random Forest',
+    details: '',
+    dataset: '',
+    method: '',
     link: '#'
   },
   {
@@ -204,9 +204,9 @@ const subProjects = ref([
     title: 'Text Data',
     icon: '📝',
     description: 'Xử lý và phân tích dữ liệu văn bản',
-    details: 'Tiền xử lý văn bản (Tokenization, Stopwords removal), trích xuất đặc trưng (TF-IDF/Embeddings) và phân tích cảm xúc hoặc phân loại văn bản.',
-    dataset: 'reviews_dataset.json',
-    method: 'NLTK, SpaCy, Transformers',
+    details: '',
+    dataset: '',
+    method: '',
     link: '#'
   },
   {
@@ -214,9 +214,9 @@ const subProjects = ref([
     title: 'Image Data',
     icon: '🖼️',
     description: 'Xử lý và trực quan hóa dữ liệu hình ảnh',
-    details: 'Trích xuất đặc trưng hình ảnh, phân loại ảnh hoặc phát hiện đối tượng. Trực quan hóa các Feature Maps và Confusion Matrix.',
-    dataset: 'custom_image_folder/',
-    method: 'OpenCV, PyTorch, CNN',
+    details: '',
+    dataset: '',
+    method: '',
     link: '#'
   }
 ])
