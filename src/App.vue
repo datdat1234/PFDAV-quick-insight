@@ -1,56 +1,65 @@
 <template>
-  <div class="min-h-screen bg-slate-50 text-slate-800 font-sans">
+  <div class="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-950 pt-1">
+
+    <!-- Lớp vệt sáng bóng (Glossy Highlight) phía sau nền -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-400/15 rounded-full blur-[120px] pointer-events-none"></div>
+
     <!-- Header / Banner Môn Học -->
-    <header class="bg-blue-900 text-white shadow-lg">
-      <div class="max-w-6xl mx-auto px-4 py-8">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-blue-700 pb-6">
-          <div>
-            <p class="text-blue-300 font-medium tracking-wide text-sm uppercase">
-              Đại học Bách Khoa – ĐHQG-HCM | Khoa KHKT Máy tính
-            </p>
-            <h1 class="text-2xl md:text-3xl font-bold mt-1">
-              Nền tảng lập trình cho phân tích và trực quan dữ liệu
-            </h1>
+    <header class="m-4 md:m-6 bg-gradient-to-b from-white/95 to-white/90 backdrop-blur-md border border-white/80 shadow-[0_20px_50px_rgba(2,6,23,0.35)] rounded-2xl text-slate-900">
+      <div class="mx-auto px-8 py-8">
+
+        <!-- Top Section: School + Semester Badge chung 1 hàng -->
+        <div class="border-b border-slate-200/80 pb-3">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-sm text-slate-600">
+            <div class="text-blue-600 font-semibold tracking-wider text-xs uppercase">
+              <p>{{ mainInfo.schoolName }}</p>
+              <p>{{ mainInfo.majorName }}</p>
+            </div>
+
+            <!-- Badge Học kỳ nhỏ gọn -->
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-50/80 text-blue-600 border border-indigo-200/80 shadow-xs">
+              {{ mainInfo.semesterTitle }}
+            </span>
           </div>
-          <div class="bg-blue-800 px-4 py-2 rounded-lg text-right border border-blue-700">
-            <p class="text-xs text-blue-200">Học kỳ & Năm học</p>
-            <p class="font-semibold text-sm">Học kỳ 261 (2026–2027)</p>
+
+          <h1 class="mt-2 text-2xl md:text-3xl font-bold mt-2 text-slate-900">
+            {{ mainInfo.courseName.toUpperCase() }}
+          </h1>
+        </div>
+
+        <!-- Bottom Section: Giảng viên & Bài tập -->
+        <div class="mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-sm text-slate-600">
+          <div class="flex items-center gap-1.5">
+            <span class="font-medium text-slate-400">Giảng viên:</span>
+            <span class="font-semibold text-slate-800">{{ mainInfo.teacherName }}</span>
           </div>
         </div>
 
-        <!-- Thông tin chi tiết môn học -->
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-100">
-          <div>
-            <span class="font-semibold text-white">Giảng viên hướng dẫn:</span> ThS./TS. Lê Thành Sách
-          </div>
-          <div class="md:text-right">
-            <span class="font-semibold text-white">Loại bài tập:</span> Bài tập lớn môn học
-          </div>
-        </div>
       </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <main class="m-4 md:m-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
       <!-- Sidebar / Thông tin nhóm -->
       <aside class="lg:col-span-1 space-y-6">
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+        <div class="p-6 bg-gradient-to-b from-white/95 to-white/90 backdrop-blur-md border border-white/80 shadow-[0_20px_50px_rgba(2,6,23,0.35)] rounded-2xl text-slate-900">
           <h2 class="text-lg font-bold text-slate-900 border-b pb-3 mb-4 flex items-center gap-2">
             <span>👥</span> Thông tin nhóm
           </h2>
-          
+
           <!-- Tên nhóm -->
           <div class="mb-4">
             <label class="text-xs text-slate-500 uppercase font-semibold">Tên nhóm</label>
-            <p class="text-lg font-bold text-blue-700">{{ groupInfo.name }}</p>
+            <p class="text-lg font-bold text-blue-600">{{ groupInfo.name }}</p>
           </div>
 
           <!-- Repository -->
           <div class="mb-6">
             <label class="text-xs text-slate-500 uppercase font-semibold">Mã nguồn nhóm</label>
-            <a 
-              :href="groupInfo.repoUrl" 
-              target="_blank" 
-              rel="noopener" 
+            <a
+              :href="groupInfo.repoUrl"
+              target="_blank"
+              rel="noopener"
               class="mt-1 flex items-center justify-center gap-2 w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-4 rounded-lg text-sm transition"
             >
               <span>📂</span> GitHub Repository
@@ -61,9 +70,9 @@
           <div>
             <label class="text-xs text-slate-500 uppercase font-semibold mb-3 block">Thành viên nhóm</label>
             <div class="space-y-4">
-              <div 
-                v-for="member in groupInfo.members" 
-                :key="member.mssv" 
+              <div
+                v-for="member in groupInfo.members"
+                :key="member.mssv"
                 class="p-3 bg-slate-50 rounded-lg border border-slate-100 text-sm"
               >
                 <div class="font-bold text-slate-800">{{ member.name }}</div>
@@ -71,10 +80,10 @@
                 <div class="text-xs text-slate-600 bg-blue-50 text-blue-700 p-1.5 rounded mb-2">
                   <span class="font-semibold">Vai trò:</span> {{ member.role }}
                 </div>
-                <a 
-                  v-if="member.github" 
-                  :href="member.github" 
-                  target="_blank" 
+                <a
+                  v-if="member.github"
+                  :href="member.github"
+                  target="_blank"
                   rel="noopener"
                   class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline"
                 >
@@ -88,73 +97,77 @@
 
       <!-- Content Area / Mục lục & Bài tập con -->
       <section class="lg:col-span-3 space-y-6">
-        <!-- Navigation Tabs (Mục lục các bài tập con) -->
-        <div class="bg-white p-2 rounded-xl shadow-sm border border-slate-200 flex flex-wrap gap-2">
-          <button
-            v-for="subProject in subProjects"
-            :key="subProject.id"
-            @click="activeTab = subProject.id"
-            :class="[
-              'px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2',
-              activeTab === subProject.id
-                ? 'bg-blue-600 text-white shadow-sm'
-                : 'text-slate-600 hover:bg-slate-100'
-            ]"
-          >
-            <span>{{ subProject.icon }}</span>
-            <span>{{ subProject.title }}</span>
-          </button>
-        </div>
-
-        <!-- Dynamic Content của từng Bài tập con -->
-        <div 
-          v-for="subProject in subProjects" 
-          :key="subProject.id"
-          v-show="activeTab === subProject.id"
-          class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 space-y-6"
-        >
-          <div class="border-b border-slate-200 pb-4">
-            <div class="flex items-center gap-3">
-              <span class="text-3xl">{{ subProject.icon }}</span>
-              <div>
-                <h2 class="text-xl font-bold text-slate-900">{{ subProject.title }}</h2>
-                <p class="text-sm text-slate-500">{{ subProject.description }}</p>
-              </div>
-            </div>
+        <div class="bg-gradient-to-b from-white/95 to-white/90 backdrop-blur-md border border-white/80 rounded-lg text-slate-900 space-y-6">
+          <!-- Navigation Tabs (Mục lục các bài tập con) -->
+          <div class="p-2 flex flex-wrap gap-2 rounded-lg bg-gradient-to-b from-white/95 to-white/90 backdrop-blur-md border border-white/80 shadow-[0_4px_10px_rgba(2,6,23,0.35)] rounded-lg text-slate-900">
+            <button
+              v-for="subProject in subProjects"
+              :key="subProject.id"
+              @click="activeTab = subProject.id"
+              :class="[
+                'px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2',
+                activeTab === subProject.id
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'text-slate-600 hover:bg-slate-100'
+              ]"
+            >
+              <span>{{ subProject.icon }}</span>
+              <span>{{ subProject.title }}</span>
+            </button>
           </div>
 
-          <!-- Nội dung chi tiết của Bài tập con -->
-          <div class="space-y-4">
-            <h3 class="font-semibold text-slate-800">Tóm tắt nội dung thực hiện:</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              {{ subProject.details }}
-            </p>
-
-            <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-2">
-              <h4 class="font-semibold text-sm text-slate-700">Kết quả & Báo cáo:</h4>
-              <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
-                <li>Bộ dữ liệu thực hiện: <code class="bg-slate-200 px-1 rounded text-xs">{{ subProject.dataset }}</code></li>
-                <li>Mô hình / Phương pháp: {{ subProject.method }}</li>
-              </ul>
+          <!-- Dynamic Content của từng Bài tập con -->
+          <div
+            v-for="subProject in subProjects"
+            :key="subProject.id"
+            v-show="activeTab === subProject.id"
+            class="p-6 md:p-8"
+          >
+            <div class="border-b border-slate-200 pb-4">
+              <div class="flex items-center gap-3">
+                <span class="text-3xl">{{ subProject.icon }}</span>
+                <div>
+                  <h2 class="text-xl font-bold text-slate-900">{{ subProject.title }}</h2>
+                  <p class="text-sm text-slate-500">{{ subProject.description }}</p>
+                </div>
+              </div>
             </div>
 
-            <!-- Link trực tiếp đến bài làm/Notebook/Báo cáo chi tiết -->
-            <div class="pt-4 flex gap-3">
-              <a 
-                :href="subProject.link" 
-                target="_blank" 
-                class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition"
-              >
-                Xem báo cáo chi tiết <span>↗</span>
-              </a>
+            <!-- Nội dung chi tiết của Bài tập con -->
+            <div class="space-y-4">
+              <h1 class="font-semibold text-slate-800">Coming soon!!!</h1>
+              <!-- <h3 class="font-semibold text-slate-800">Tóm tắt nội dung thực hiện:</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                {{ subProject.details }}
+              </p>
+
+              <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-2">
+                <h4 class="font-semibold text-sm text-slate-700">Kết quả & Báo cáo:</h4>
+                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                  <li>Bộ dữ liệu thực hiện: <code class="bg-slate-200 px-1 rounded text-xs">{{ subProject.dataset }}</code></li>
+                  <li>Mô hình / Phương pháp: {{ subProject.method }}</li>
+                </ul>
+              </div>-->
+
+              <!-- Link trực tiếp đến bài làm/Notebook/Báo cáo chi tiết -->
+              <!--<div class="pt-4 flex gap-3">
+                <a
+                  :href="subProject.link"
+                  disabled="true"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition"
+                >
+                  Xem báo cáo chi tiết
+                </a>
+              </div>-->
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500">
-      <p>© 2026 {{ groupInfo.name }} - Trường Đại học Bách Khoa – ĐHQG-HCM</p>
+    <footer class="bg-white border-t border-slate-200 mt-6 py-6 text-center text-xs text-slate-500">
+      <p>© 2026 {{ groupInfo.name }} - Trường Đại học Bách Khoa – Đại học Quốc gia Thành phố Hồ Chí Minh</p>
     </footer>
   </div>
 </template>
@@ -165,12 +178,21 @@ import { ref } from 'vue'
 // Tab hiện tại được chọn (Default: tabular)
 const activeTab = ref('tabular')
 
+// Main information
+const mainInfo = ref ({
+  schoolName: 'Đại học Bách Khoa – Đại học Quốc gia Thành phố Hồ Chí Minh',
+  majorName: 'Khoa Khoa học và Kỹ thuật Máy Tính',
+  courseName: 'Nền tảng lập trình cho phân tích và trực quan dữ liệu',
+  teacherName: 'Lê Thành Sách',
+  semesterTitle: 'Học kỳ 261 (2026-2027)'
+})
+
 // Thông tin Nhóm
 const groupInfo = ref({
   name: 'Quick Insight',
 
   repoUrl: 'https://github.com/datdat1234/PFDAV-quick-insight', // Link repository nhóm
-  
+
   members: [
     {
       name: 'Lê Phước Đạt',
