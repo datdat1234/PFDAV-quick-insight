@@ -123,43 +123,14 @@
             v-show="activeTab === subProject.id"
             class="project-content"
           >
-            <div class="project-header">
-              <div class="project-heading">
-                <span class="project-icon">{{ subProject.icon }}</span>
-                <div>
-                  <h2 class="project-title">{{ subProject.title }}</h2>
-                  <p class="project-description">{{ subProject.description }}</p>
-                </div>
-              </div>
-            </div>
 
             <!-- Nội dung chi tiết của Bài tập con -->
-            <div class="project-details">
+            <VietnameseHousePriceTabular
+              v-if="subProject.id === 'tabular'"
+              :sub-project="subProject"
+            />
+            <div v-else class="project-details">
               <h1 class="coming-soon">Coming soon!!!</h1>
-              <!-- <h3 class="font-semibold text-slate-800">Tóm tắt nội dung thực hiện:</h3>
-              <p class="text-slate-600 text-sm leading-relaxed">
-                {{ subProject.details }}
-              </p>
-
-              <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-2">
-                <h4 class="font-semibold text-sm text-slate-700">Kết quả & Báo cáo:</h4>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
-                  <li>Bộ dữ liệu thực hiện: <code class="bg-slate-200 px-1 rounded text-xs">{{ subProject.dataset }}</code></li>
-                  <li>Mô hình / Phương pháp: {{ subProject.method }}</li>
-                </ul>
-              </div>-->
-
-              <!-- Link trực tiếp đến bài làm/Notebook/Báo cáo chi tiết -->
-              <!--<div class="pt-4 flex gap-3">
-                <a
-                  :href="subProject.link"
-                  disabled="true"
-                  target="_blank"
-                  class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition"
-                >
-                  Xem báo cáo chi tiết
-                </a>
-              </div>-->
             </div>
           </div>
         </div>
@@ -174,6 +145,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import VietnameseHousePriceTabular from './vietnamese_house_price_tabular/index.vue'
 
 // Tab hiện tại được chọn (Default: tabular)
 const activeTab = ref('tabular')
@@ -213,11 +185,11 @@ const groupInfo = ref({
 const subProjects = ref([
   {
     id: 'tabular',
-    title: 'Tabular Data',
+    title: 'Vietnamese House Price Tabular',
     icon: '📊',
-    description: 'Phân tích và trực quan hóa dữ liệu dạng bảng',
+    description: 'Phân tích và trực quan hóa dữ liệu bảng về giá nhà tại Việt Nam 2024',
     details: '',
-    dataset: '',
+    dataset: 'https://www.kaggle.com/datasets/nguyentiennhan/vietnam-housing-dataset-2024',
     method: '',
     link: '#'
   },
