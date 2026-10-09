@@ -1,0 +1,187 @@
+@layer components {
+  .page-shell {
+    @apply min-h-screen bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-950 pt-1;
+  }
+
+  .glow-blue {
+    @apply absolute -top-40 -left-40 h-96 w-96 rounded-full bg-blue-500/30 blur-3xl pointer-events-none;
+  }
+
+  .glow-cyan {
+    @apply absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/15 blur-[120px] pointer-events-none;
+  }
+
+  .course-header,
+  .group-panel {
+    @apply bg-gradient-to-b from-white/95 to-white/90 backdrop-blur-md border border-white/80 shadow-[0_20px_50px_rgba(2,6,23,0.35)] rounded-2xl text-slate-900;
+  }
+
+  .course-header {
+    @apply m-4 md:m-6;
+  }
+
+  .header-inner {
+    @apply mx-auto px-8 py-8;
+  }
+
+  .header-top {
+    @apply border-b border-slate-200/80 pb-3;
+  }
+
+  .school-semester-row,
+  .instructor-row {
+    @apply flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-sm text-slate-600;
+  }
+
+  .school-info {
+    @apply text-blue-600 font-semibold tracking-wider text-xs uppercase;
+  }
+
+  .semester-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-50/80 text-blue-600 border border-indigo-200/80 shadow-xs;
+  }
+
+  .course-title {
+    @apply mt-2 text-2xl md:text-3xl font-bold text-slate-900;
+  }
+
+  .instructor-row {
+    @apply mt-4;
+  }
+
+  .instructor-group {
+    @apply flex items-center gap-1.5;
+  }
+
+  .instructor-label {
+    @apply font-medium text-slate-400;
+  }
+
+  .instructor-name {
+    @apply font-semibold text-slate-800;
+  }
+
+  .content-layout {
+    @apply m-4 md:m-6 grid grid-cols-1 lg:grid-cols-4 gap-8;
+  }
+
+  .group-sidebar {
+    @apply lg:col-span-1 space-y-6;
+  }
+
+  .group-panel {
+    @apply p-6;
+  }
+
+  .section-title {
+    @apply text-lg font-bold text-slate-900 border-b pb-3 mb-4 flex items-center gap-2;
+  }
+
+  .group-name-field {
+    @apply mb-4;
+  }
+
+  .field-label {
+    @apply text-xs text-slate-500 uppercase font-semibold;
+  }
+
+  .group-name {
+    @apply text-lg font-bold text-blue-600;
+  }
+
+  .repo-field {
+    @apply mb-6;
+  }
+
+  .repo-link {
+    @apply mt-1 flex items-center justify-center gap-2 w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 px-4 rounded-lg text-sm transition;
+  }
+
+  .member-list-label {
+    @apply mb-3 block;
+  }
+
+  .members-list {
+    @apply space-y-4;
+  }
+
+  .member-card {
+    @apply p-3 bg-slate-50 rounded-lg border border-slate-100 text-sm;
+  }
+
+  .member-name {
+    @apply font-bold text-slate-800;
+  }
+
+  .member-id {
+    @apply text-xs text-slate-500 mb-1;
+  }
+
+  .member-role {
+    @apply text-xs text-slate-600 bg-blue-50 text-blue-700 p-1.5 rounded mb-2;
+  }
+
+  .profile-link {
+    @apply inline-flex items-center gap-1 text-xs text-blue-600 hover:underline;
+  }
+
+  .project-section {
+    @apply lg:col-span-3 space-y-6;
+  }
+
+  .projects-panel {
+    @apply bg-gradient-to-b from-white/95 to-white/90 backdrop-blur-md border border-white/80 rounded-lg text-slate-900 space-y-6;
+  }
+
+  .project-tabs {
+    @apply p-2 flex flex-wrap gap-2 rounded-lg bg-gradient-to-b from-white/95 to-white/90 backdrop-blur-md border border-white/80 shadow-[0_4px_10px_rgba(2,6,23,0.35)] text-slate-900;
+  }
+
+  .project-tab {
+    @apply px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2;
+  }
+
+  .project-tab-active {
+    @apply bg-blue-600 text-white shadow-sm;
+  }
+
+  .project-tab-inactive {
+    @apply text-slate-600 hover:bg-slate-100;
+  }
+
+  .project-content {
+    @apply p-6 md:p-8;
+  }
+
+  .project-header {
+    @apply border-b border-slate-200 pb-4;
+  }
+
+  .project-heading {
+    @apply flex items-center gap-3;
+  }
+
+  .project-icon {
+    @apply text-3xl;
+  }
+
+  .project-title {
+    @apply text-xl font-bold text-slate-900;
+  }
+
+  .project-description {
+    @apply text-sm text-slate-500;
+  }
+
+  .project-details {
+    @apply space-y-4;
+  }
+
+  .coming-soon {
+    @apply font-semibold text-slate-800;
+  }
+
+  .page-footer {
+    @apply bg-white border-t border-slate-200 mt-6 py-6 text-center text-xs text-slate-500;
+  }
+}
