@@ -1,0 +1,26 @@
+:root {
+  --bg: #0e1726;
+  --bg-alt: #121d2f;
+  --surface: #17243a;
+  --surface-2: #1d2c45;
+  --border: #2a3a55;
+  --text: #e7ecf3;
+  --text-muted: #a3b1c6;
+  --accent: #e4735c;
+  --accent-2: #6fa8c9;
+  --success: #7fb69a;
+
+  --chart-1: #6fa8c9;
+  --chart-2: #e4735c;
+  --chart-3: #9bb48a;
+  --chart-4: #c9a86a;
+  --chart-5: #9a8fc4;
+  --chart-6: #7aa6a0;
+
+  --radius: 10px;
+  --space: 8px;
+  --maxw: 1200px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 450ms;
+}

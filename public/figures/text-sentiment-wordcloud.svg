@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" role="img" aria-label="Placeholder word cloud of frequent terms by sentiment class">
+  <rect width="480" height="280" fill="#121d2f"/>
+  <g font-family="sans-serif" fill="#e7ecf3" text-anchor="middle">
+    <text x="120" y="70" font-size="30" fill="#7fb69a">fast</text>
+    <text x="340" y="60" font-size="18" fill="#e4735c">refund</text>
+    <text x="100" y="140" font-size="22" fill="#6fa8c9">quality</text>
+    <text x="300" y="160" font-size="26" fill="#e4735c">broken</text>
+    <text x="200" y="210" font-size="16" fill="#9bb48a">comfortable</text>
+    <text x="380" y="220" font-size="14" fill="#e4735c">late</text>
+    <text x="60" y="230" font-size="14" fill="#6fa8c9">value</text>
+  </g>
+</svg>

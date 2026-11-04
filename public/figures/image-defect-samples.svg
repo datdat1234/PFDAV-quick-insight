@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Placeholder grid of sample part images per defect class">
+  <rect width="480" height="300" fill="#121d2f"/>
+  <g font-family="sans-serif" fill="#a3b1c6" font-size="13">
+    <text x="24" y="24">Sample images per class (placeholder)</text>
+  </g>
+  <g fill="#17243a" stroke="#2a3a55">
+    <rect x="30" y="44" width="130" height="110"/>
+    <rect x="175" y="44" width="130" height="110"/>
+    <rect x="320" y="44" width="130" height="110"/>
+    <rect x="30" y="170" width="130" height="110"/>
+    <rect x="175" y="170" width="130" height="110"/>
+    <rect x="320" y="170" width="130" height="110"/>
+  </g>
+  <g fill="#6fa8c9">
+    <circle cx="95" cy="99" r="18"/>
+    <circle cx="240" cy="99" r="18"/>
+    <circle cx="385" cy="99" r="18"/>
+    <circle cx="95" cy="225" r="18"/>
+    <circle cx="240" cy="225" r="18"/>
+    <circle cx="385" cy="225" r="18"/>
+  </g>
+</svg>
