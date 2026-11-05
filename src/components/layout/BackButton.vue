@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 function goHome() {
-  router.push({ path: '/', hash: '#projects' })
+  router.push({ path: '/PFDAV-quick-insight/', hash: '#projects' })
 }
 </script>
 

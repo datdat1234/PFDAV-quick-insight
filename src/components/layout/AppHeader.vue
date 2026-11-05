@@ -21,7 +21,7 @@ function goHomeAnchor(hash) {
     document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' })
     return
   }
-  router.push({ path: '/', hash })
+  router.push({ path: '/PFDAV-quick-insight/', hash })
 }
 </script>
 
