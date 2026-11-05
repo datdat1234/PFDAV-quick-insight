@@ -18,7 +18,7 @@ const { el } = useReveal()
       {{ project.dataType }}
     </span>
     <p class="project-summary">{{ project.summary }}</p>
-    <router-link :to="`/projects/${project.slug}`" class="view-link underline-link">
+    <router-link :to="`/PFDAV-quick-insight/projects/${project.slug}`" class="view-link underline-link">
       View project →
     </router-link>
   </article>
