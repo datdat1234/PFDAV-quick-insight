@@ -3,7 +3,7 @@
 /** @type {Project} */
 export const project = {
   slug: 'text-sentiment',
-  title: 'Sentiment Classification of Product Reviews',
+  title: 'Department Allocation based on Diagnosis',
   dataType: 'Text',
   summary:
     'A fine-tuned transformer classifier that labels product reviews as positive, neutral, or negative, compared against a classic TF-IDF + SVM pipeline.',

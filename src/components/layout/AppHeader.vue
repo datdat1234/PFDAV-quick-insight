@@ -43,7 +43,7 @@ function goHomeAnchor(hash) {
 
       <nav id="header-nav" class="header-nav" :class="{ open: menuOpen }" aria-label="Primary">
         <a href="#course" class="underline-link" @click.prevent="goHomeAnchor('#course')">Course</a>
-        <a href="#team" class="underline-link" @click.prevent="goHomeAnchor('#team')">Team</a>
+        <a href="#group" class="underline-link" @click.prevent="goHomeAnchor('#group')">Group</a>
         <a href="#projects" class="underline-link" @click.prevent="goHomeAnchor('#projects')">Projects</a>
         <a
           :href="site.repoLink"

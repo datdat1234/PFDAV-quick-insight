@@ -5,19 +5,8 @@ import { site } from '../../data/site.config.js'
 <template>
   <footer class="app-footer">
     <div class="container footer-row">
-      <p>{{ site.course }} · Semester {{ site.semester }}, {{ site.year }}</p>
       <p>{{ site.group }}</p>
-      <a
-        :href="site.repoLink"
-        class="underline-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Repository
-        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M7 17 17 7M9 7h8v8" />
-        </svg>
-      </a>
+      <p>{{ site.semester }} · {{ site.year }}</p>
     </div>
   </footer>
 </template>

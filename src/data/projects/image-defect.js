@@ -3,7 +3,7 @@
 /** @type {Project} */
 export const project = {
   slug: 'image-defect',
-  title: 'Visual Defect Detection on Manufacturing Parts',
+  title: 'Comming soon',
   dataType: 'Image',
   summary:
     'A CNN-based classifier that flags surface defects on manufactured parts from camera images, built for a quality-control inspection line.',

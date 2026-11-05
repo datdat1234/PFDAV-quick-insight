@@ -4,9 +4,9 @@ import MemberCard from './MemberCard.vue'
 </script>
 
 <template>
-  <section id="team" class="section-band" aria-labelledby="team-heading">
+  <section id="group" class="section-band" aria-labelledby="group-heading">
     <div class="container">
-      <h2 id="team-heading">{{ site.group }}</h2>
+      <h2 id="group-heading">{{ site.group }}</h2>
       <div class="member-grid">
         <MemberCard
           v-for="(member, idx) in site.members"
@@ -15,7 +15,7 @@ import MemberCard from './MemberCard.vue'
           :index="idx"
         />
       </div>
-      <a
+      <!-- <a
         :href="site.repoLink"
         class="repo-link underline-link"
         target="_blank"
@@ -25,7 +25,7 @@ import MemberCard from './MemberCard.vue'
         <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M7 17 17 7M9 7h8v8" />
         </svg>
-      </a>
+      </a> -->
     </div>
   </section>
 </template>

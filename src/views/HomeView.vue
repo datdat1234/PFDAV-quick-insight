@@ -1,7 +1,7 @@
 <script setup>
 import HeroSection from '../components/home/HeroSection.vue'
 import CourseInfo from '../components/home/CourseInfo.vue'
-import TeamSection from '../components/home/TeamSection.vue'
+import GroupSection from '../components/home/GroupSection.vue'
 import ProjectList from '../components/home/ProjectList.vue'
 </script>
 
@@ -9,7 +9,7 @@ import ProjectList from '../components/home/ProjectList.vue'
   <div class="home-view">
     <HeroSection />
     <CourseInfo />
-    <TeamSection />
+    <GroupSection />
     <ProjectList />
   </div>
 </template>

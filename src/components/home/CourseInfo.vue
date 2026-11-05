@@ -23,8 +23,12 @@ const { el } = useReveal()
           <dd>{{ site.course }}</dd>
         </div>
         <div class="info-item">
-          <dt>Semester &amp; year</dt>
-          <dd>Semester {{ site.semester }}, {{ site.year }}</dd>
+          <dt>Year</dt>
+          <dd>{{ site.year }}</dd>
+        </div>
+        <div class="info-item">
+          <dt>Semester</dt>
+          <dd>{{ site.semester }}</dd>
         </div>
         <div class="info-item">
           <dt>Lecturer</dt>

@@ -10,15 +10,31 @@ const defaultSite = {
   university: 'Đại học Bách Khoa – ĐHQG-HCM',
   major: 'Khoa Khoa học và Kỹ thuật Máy tính',
   course: 'Nền tảng lập trình cho phân tích và trực quan dữ liệu',
-  semester: '261',
+  semester: 'HK261',
   year: '2026 - 2027',
   teacher: 'Lê Thành Sách',
   group: 'Group Quick Insight',
   repoLink: 'https://github.com/datdat1234/PFDAV-quick-insight',
   /** @type {Member[]} */
   members: [
-    { fullName: 'Lê Phước Đạt', id: '2670266', role: 'Tabular', gitLink: 'https://github.com/datdat1234' },
-    { fullName: 'Nguyễn Nhật Hạ', id: '2670276', role: 'Text', gitLink: 'https://github.com/nhatha32' },
+    {
+      fullName: 'Nguyễn Nhật Hạ',
+      id: '2670276',
+      role:  [
+        'Tabular',
+        'Image'
+      ],
+      gitLink: 'https://github.com/nhatha32'
+    },
+    {
+      fullName: 'Lê Phước Đạt',
+      id: '2670266',
+      role: [
+        'Text',
+        'Image'
+      ],
+      gitLink: 'https://github.com/datdat1234'
+    },
   ],
   /**
    * Exactly 3 projects, one per file under `src/data/projects/`.
@@ -54,7 +70,7 @@ function loadOverride() {
     if (!raw) return null
     const parsed = JSON.parse(raw)
     if (!isValidSite(parsed)) {
-      console.warn('[site.config] ignoring invalid saved override (empty team/projects) — using committed defaults')
+      console.warn('[site.config] ignoring invalid saved override (empty group/projects) — using committed defaults')
       localStorage.removeItem(OVERRIDE_KEY)
       return null
     }

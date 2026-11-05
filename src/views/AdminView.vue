@@ -52,7 +52,7 @@ function applySections(project, text) {
 
 function handleSave() {
   if (site.members.length === 0) {
-    status.value = 'Not saved: add at least one team member first.'
+    status.value = 'Not saved: add at least one group member first.'
     return
   }
   const blankProject = site.projects.find((p) => !p.title.trim())
@@ -122,7 +122,7 @@ async function copyExport() {
       </section>
 
       <section class="admin-section" aria-labelledby="members-admin-heading">
-        <h2 id="members-admin-heading">Team members</h2>
+        <h2 id="members-admin-heading">Group members</h2>
         <div v-for="(member, idx) in site.members" :key="idx" class="member-row">
           <label>Full name<input v-model="member.fullName" type="text" /></label>
           <label>Student ID<input v-model="member.id" type="text" /></label>

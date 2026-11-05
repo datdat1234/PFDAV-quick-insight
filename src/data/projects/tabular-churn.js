@@ -3,7 +3,7 @@
 /** @type {Project} */
 export const project = {
   slug: 'tabular-churn',
-  title: 'Predicting Customer Churn from Tabular Data',
+  title: 'Predicting House Price in Vietnam',
   dataType: 'Tabular',
   summary:
     'A gradient-boosted model that predicts subscription churn from account, usage, and billing features, benchmarked against a logistic-regression baseline.',
@@ -109,7 +109,7 @@ export const project = {
         {
           type: 'text',
           content:
-            'The LightGBM model improves ROC-AUC by 6 points over the baseline and would let the retention team target roughly 2x more true churners at the same outreach budget. **Next steps**: calibrate probabilities for cost-sensitive thresholding and monitor for feature drift in production.',
+            'The LightGBM model improves ROC-AUC by 6 points over the baseline and would let the retention group target roughly 2x more true churners at the same outreach budget. **Next steps**: calibrate probabilities for cost-sensitive thresholding and monitor for feature drift in production.',
         },
       ],
     },

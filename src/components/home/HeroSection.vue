@@ -7,13 +7,17 @@ const { el } = useReveal()
 function scrollToProjects() {
   document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
 }
+
+function scrollToGroup() {
+  document.getElementById('group')?.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <template>
   <section class="hero section-band">
     <div class="container" ref="el" data-reveal>
+      <p class="subtitle">{{ site.group }}</p>
       <h1>{{ site.course }}</h1>
-      <p class="subtitle">{{ site.major }} · {{ site.university }}</p>
       <div class="hero-ctas">
         <button type="button" class="btn-primary" @click="scrollToProjects">View projects</button>
         <a
@@ -22,7 +26,7 @@ function scrollToProjects() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Repository
+          Project repository
           <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M7 17 17 7M9 7h8v8" />
           </svg>
@@ -44,7 +48,7 @@ h1 {
 }
 
 .subtitle {
-  margin-top: 16px;
+  margin-bottom: 16px;
   color: var(--text-muted);
   font-size: 1.1rem;
 }

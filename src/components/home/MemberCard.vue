@@ -12,8 +12,8 @@ const { el } = useReveal()
 <template>
   <div ref="el" class="member-card" data-reveal :style="{ transitionDelay: `${index * 60}ms` }">
     <p class="member-name">{{ member.fullName }}</p>
-    <p class="member-id">{{ member.id }}</p>
-    <span class="role-tag">{{ member.role }}</span>
+    <span class="id-tag">{{ member.id }}</span>
+    <p class="member-role">Role: {{ member.role }}</p>
     <a
       v-if="member.gitLink"
       :href="member.gitLink"
@@ -52,13 +52,13 @@ const { el } = useReveal()
   font-weight: 600;
 }
 
-.member-id {
+.member-role {
   margin: 0;
   color: var(--text-muted);
   font-size: 0.85rem;
 }
 
-.role-tag {
+.id-tag {
   align-self: flex-start;
   border: 1px solid var(--border);
   border-radius: 999px;

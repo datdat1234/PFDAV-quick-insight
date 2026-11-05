@@ -6,7 +6,7 @@ A static Vue 3 + Vite site presenting a graduate course group project made of th
 
 Content is split across a few files so each project can be edited on its own, without touching the others:
 
-- **`src/data/site.config.js`** — course info and team only:
+- **`src/data/site.config.js`** — course info and group only:
   - `university`, `major`, `course`, `semester`, `year`, `teacher`, `group`, `repoLink` — shown on the home page and footer.
   - `members` — array of `{ fullName, id, role, gitLink }`. Rendered as cards on the home page and a compact list on each project page.
   - `projects` — do not edit the array literally here; it's assembled from the three files below. Keep exactly 3 imports/entries.
