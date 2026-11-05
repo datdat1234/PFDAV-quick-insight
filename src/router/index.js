@@ -6,10 +6,10 @@ import NotFoundView from '../views/NotFoundView.vue'
 import { site } from '../data/site.config.js'
 
 const routes = [
-  { path: '/', name: 'home', component: HomeView },
-  { path: '/projects/:slug', name: 'project', component: ProjectView },
-  { path: '/admin', name: 'admin', component: AdminView },
-  { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFoundView },
+  { path: '/PFDAV-quick-insight/', name: 'home', component: HomeView },
+  { path: '/PFDAV-quick-insight/projects/:slug', name: 'project', component: ProjectView },
+  { path: '/PFDAV-quick-insight/admin', name: 'admin', component: AdminView },
+  { path: '/PFDAV-quick-insight/:pathMatch(.*)*', name: 'not-found', component: NotFoundView },
 ]
 
 export const router = createRouter({
