@@ -28,7 +28,7 @@ function goHomeAnchor(hash) {
 <template>
   <header class="app-header" :class="{ scrolled }">
     <div class="container header-row">
-      <router-link to="/" class="group-name">{{ site.group }}</router-link>
+      <router-link to="/PFDAV-quick-insight/" class="group-name">{{ site.group }}</router-link>
 
       <button
         class="menu-toggle"

@@ -6,7 +6,7 @@
     <div class="container">
       <h1>404</h1>
       <p>We couldn't find that page.</p>
-      <router-link to="/" class="underline-link">← Back to home</router-link>
+      <router-link to="/PFDAV-quick-insight/" class="underline-link">← Back to home</router-link>
     </div>
   </div>
 </template>
